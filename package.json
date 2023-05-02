@@ -40,7 +40,6 @@
     "lib/**/*.js",
     "lib/**/*.d.ts",
     "lib/index.cjs",
-    "lib/core.cjs
   ],
   "bugs": {
     "url": "https://github.com/Borewit/strtok3/issues"
