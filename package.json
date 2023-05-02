@@ -12,7 +12,7 @@
   },
   "main": "./common.cjs",
   "scripts": {
-    "build-cjs": "esbuild ./common.js --bundle --platform=node --target=node14 --outfile=./common.cjs"
+    "build-cjs": "esbuild ./common.js --bundle --platform=node --target=node14 --outfile=./common.cjs",
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts test/**/*.js test/**/*.js.map",
     "compile-src": "tsc -p lib",
     "compile-test": "tsc -p test",
