@@ -10,7 +10,9 @@
     "type": "github",
     "url": "https://github.com/sponsors/Borewit"
   },
+  "main": "./common.cjs",
   "scripts": {
+    "build-cjs": "esbuild ./common.js --bundle --platform=node --target=node14 --outfile=./common.cjs"
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts test/**/*.js test/**/*.js.map",
     "compile-src": "tsc -p lib",
     "compile-test": "tsc -p test",
@@ -33,18 +35,12 @@
     "url": "https://github.com/Borewit/strtok3.git"
   },
   "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "node": "./lib/index.js",
-      "default": "./lib/core.js"
-    },
-    "./core": "./lib/core.js"
-  },
   "types": "lib/index.d.ts",
   "files": [
     "lib/**/*.js",
-    "lib/**/*.d.ts"
+    "lib/**/*.d.ts",
+    "lib/index.cjs",
+    "lib/core.cjs
   ],
   "bugs": {
     "url": "https://github.com/Borewit/strtok3/issues"
@@ -74,6 +70,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "esbuild": "^0.15.13",
     "@tokenizer/token": "^0.3.0",
     "peek-readable": "^5.0.0"
   },
