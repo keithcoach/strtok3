@@ -37,7 +37,10 @@
   "exports": {
     ".": {
       "node": "./lib/index.js",
-      "default": "./lib/core.js"
+      "default": "./lib/core.js",
+      "require": "./lib/index.js",
+      "import": "./lib/core.js",
+
     },
     "./core": "./lib/core.js"
   },
